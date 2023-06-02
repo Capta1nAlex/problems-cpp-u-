@@ -3,7 +3,7 @@ Three friends - Andrei, Boris and Vladimir live respectively on a, b and v floor
 Make a program that would determine the number of the floor on which they will meet, and the time before the meeting would be minimal. Note that the speed of descent down the stairs is 47/31 times higher than the speed of ascent.
 
 Input data
-Three positive numbers - the floor numbers a, b, v (1 ≤ a, b, v ≤ 28), where friends live.
+Three positive numbers - the floor numbers a, b, c (1 ≤ a, b, c ≤ 28), where friends live.
 Output data
 Print the floor number where friends will meet.
 
