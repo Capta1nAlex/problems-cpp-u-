@@ -6,3 +6,5 @@ One positive integer n (n ≤ 27).
 Output data
 Print the number of required lucky tickets.
 
+Author: Serhii Zhukovskyi
+Source: The second stage of the All-Ukrainian Informatics Olympiad in Zhytomyr region.
