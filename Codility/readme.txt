@@ -1,1 +1,1 @@
-This folder contains solutions for problems that I found at https://app.codility.com/
+This folder contains solutions for problems that I found on https://app.codility.com/
