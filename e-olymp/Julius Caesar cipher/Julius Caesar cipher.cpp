@@ -1,4 +1,4 @@
-// Julius Caesar Cyfer.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// Julius Caesar cipher.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
