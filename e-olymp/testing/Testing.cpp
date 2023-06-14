@@ -3,7 +3,7 @@
 
 #include <iostream>
 using namespace std;
-int gcd(long long vl, long long v2)
+int gcd(long long vl, long long v2) // finding greatest common divider
 {
 	while (v2)
 	{
@@ -15,16 +15,13 @@ int gcd(long long vl, long long v2)
 }
 int main()
 {
-	long long a, b, v, w, cin1, cin2;
-	cin >> a;
-	cin >> b;
-	cin >> v;
-	cin >> w;
-	cin1 = a * w + b * v;
-	cin2 = b * w;
-	long long recall = cin1;
-	cin1 = cin1 / gcd(cin1, cin2);
-	cin2 = cin2 / gcd(recall, cin2);
-	cout << cin1 << " ";
-	cout << cin2 << " ";
+	long long nom1, denom1, nom2, denom2, nomR, denomR;
+	cin >> nom1 >> denom1 >> nom2 >> denom2;
+	nomR = nom1 * denom2 + denom1 * nom2; // getting nominator of final result
+	denomR = denom1 * denom2; // getting denominator of final result
+	long long recall = nomR; 
+	nomR = nomR / gcd(nomR, denomR);  // simplifying a fraction 
+	denomR = denomR / gcd(recall, denomR); // simplifying a fraction 
+	cout << nomR << " ";
+	cout << denomR << " ";
 }
