@@ -7,10 +7,10 @@ int main()
 {
     string s;
     cin >> s;
-    int shift;
+    int shift; // Amount of shifts per letter
     cin >> shift;
     for (int i = 0; i < s.length(); i++) {
-        if (s[i] - shift < 65) {
+        if (s[i] - shift < 65) { // 65-90 values of char are used for saving [A...Z] letters
             s[i] = 90 - (64 - (s[i] - shift));
         }
         else s[i] -= shift;
