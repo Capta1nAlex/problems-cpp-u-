@@ -6,7 +6,7 @@
 using namespace std;
 int main()
 {
-	multiset<int>s;
+	multiset<int>s; // creating a multiset, so values of floors will be always sorted
 	int temp;
 	cin >> temp;
 	s.insert(temp);
@@ -15,10 +15,10 @@ int main()
 	cin >> temp;
 	s.insert(temp);
 	double a, b, c;
-	a = *next(s.begin(), 0);
-	b = *next(s.begin(), 1);
-	c = *next(s.begin(), 2);
-	if ((b - a) * 47 / 31 > (c - a)) {
+	a = *next(s.begin(), 0); // the lowest floor
+	b = *next(s.begin(), 1); // the average floor
+	c = *next(s.begin(), 2); // the highest floor
+	if ((b - a) * 47 / 31 > (c - a)) { 
 		cout << a;
 	}
 	else cout << b;
