@@ -18,9 +18,9 @@ vector<int> solution(vector<int>& A, int K) {
 }
 
 
-int main()
-{
-    vector<int>a = { 3, 8, 9, 7, 6 };
-    int k = 3;
-    solution(a, k);
-}
+//int main()
+//{
+//    vector<int>a = { 3, 8, 9, 7, 6 };
+//    int k = 3;
+//    solution(a, k);
+//}
