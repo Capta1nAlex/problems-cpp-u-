@@ -1,1 +1,1 @@
-This folder contains solutions for problems that I found on https://app.codility.com/
+https://app.codility.com/programmers/lessons/4-counting_elements/max_counters/
