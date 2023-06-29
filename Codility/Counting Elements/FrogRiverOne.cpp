@@ -20,11 +20,11 @@ int solution(int X, vector<int>& A) {
     return -1;
 }
 
-int main()
-{
-    vector<int> a = {1, 3, 1, 4, 2, 3, 5, 4};
-    solution(5, a);
-}
+//int main()
+//{
+//    vector<int> a = {1, 3, 1, 4, 2, 3, 5, 4};
+//    solution(5, a);
+//}
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
