@@ -15,4 +15,4 @@ Output
 Output a single integer - the found minimum amount of money for which you can buy all gifts.
 
 Author Shamil Yagiyaev
-Source 2008 XXI All-Ukrainian Informatics Olympiad, Lvov, April 5 - 11, Round 2
+Source 2008 XXI All-Ukrainian Informatics Olympiad, Lviv, April 5 - 11, Round 2
