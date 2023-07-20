@@ -1,34 +1,31 @@
-#include <iostream>
-#include <vector>
-using namespace std;
-
-//100% correctness, 62% perfomance. Working on a fix right now.
+typedef long long ll;
+#include <algorithm>
+#include <climits>
 int solution(vector<int>& A) {
     vector<long long> start;
     vector<long long> end;
     int sum = 0;
     for (long i = 0; i < A.size(); i++) {
-        start.push_back(i - long long(A[i]));
-        end.push_back(i + long long(A[i]));
+        start.push_back(i - ll(A[i]));
+        end.push_back(i + ll(A[i]));
     }
-    for (int i = 0; i < A.size(); i++) {
-        int iStart = start[i];
-        int iEnd = end[i];
-        for (int j = i + 1; j < A.size(); j++) {
-            if ((iEnd >= start[j] && iStart <= end[j])) {
-                sum++;
-            }
+    sort(start.begin(), start.end());
+    start.push_back(LONG_MAX);
+    sort(end.begin(), end.end());
+    int dCurrent = 0, iStart = 0, iEnd = 0;
+    while (iEnd < end.size()) {
+        if (start[iStart] <= end[iEnd]) {
+            sum += dCurrent;
+            dCurrent++;
+            iStart++;
+        }
+        else {
+            dCurrent--;
+            iEnd++;
         }
     }
-    cout << sum;
     if (sum > 10000000) {
         return -1;
     }
     else return sum;
-}
-
-int main()
-{
-    vector <int> vec {0, 2147483647 };
-    solution(vec);
 }
