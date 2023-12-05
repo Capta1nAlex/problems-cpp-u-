@@ -1,0 +1,31 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include <map>
+using namespace std;
+
+int main()
+{
+    int n; // number of extensions
+    cin >> n; cin.ignore();
+    int q; // number of filenames
+    cin >> q; cin.ignore();        
+    map<string, string> datatypes;
+    for (int i = 0; i < n; i++) {
+        string ext; 
+        string mt; 
+        cin >> ext >> mt; cin.ignore();
+        transform(ext.begin(), ext.end(), ext.begin(), [](unsigned char c) { return tolower(c); }); // in this task extensions should be case insensitive
+        datatypes[ext]=mt;
+    }
+    for (int i = 0; i < q; i++) {
+        string fname; // file name
+        getline(cin, fname); 
+        string type; // we will get our file type in here    
+        size_t lastDotPosition = fname.find_last_of('.');
+        if (lastDotPosition != string::npos) for (int i = lastDotPosition+1; i < fname.size(); i++) type+=tolower(fname[i]); 
+        auto it = datatypes.find(type);
+        if (it != datatypes.end()) cout << it->second << endl;
+        else cout << "UNKNOWN" << endl;
+    }
+}
